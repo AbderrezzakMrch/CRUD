@@ -11,11 +11,12 @@ app.use(cors())
 app.use(express.json())
 
 
-
-app.get('/',(req,res)=> {
-    res.status(200).send('helle fuck you')
+// Handle the request
+app.post('/createUser',(req,res) => {
+    UserModel.create(req.body)
+    .then(users => res.json(users))
+    .catch(err => res.json(err))
 })
-
 
 
 
