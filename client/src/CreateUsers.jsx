@@ -4,9 +4,9 @@ import {useNavigate} from 'react-router-dom'
 
 function CreateUsers() {
 
-    const [name,setName] = useState()
-    const [email,setEmail] = useState()
-    const [age,setAge] = useState()
+    const [name,setName] = useState("")
+    const [email,setEmail] = useState("")
+    const [age,setAge] = useState("")
     const navigate = useNavigate()
 
     const Submit = (e) => {
